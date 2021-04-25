@@ -1,19 +1,3 @@
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("header").style.paddingTop = "0px";
-    document.getElementById("header").style.top = "0";
-    document.getElementById("logo").style.fontSize = "24px";
-  } else {
-    document.getElementById("header").style.paddingTop = "46px";
-    // document.getElementById("header").style.top = "46px";
-    document.getElementById("logo").style.fontSize = "30px";
-  }
-}
-
 // OffCanvas Navigation Menu on Mobile Screen Start
 function darken_screen(yesno) {
   if (yesno == true) {
@@ -27,12 +11,14 @@ function close_offcanvas() {
   darken_screen(false);
   document.querySelector(".mobile-offcanvas.show").classList.remove("show");
   document.body.classList.remove("offcanvas-active");
+  // document.querySelector(".mobile-toggle").classList.add("bg-white");
 }
 
 function show_offcanvas(offcanvas_id) {
   darken_screen(true);
   document.getElementById(offcanvas_id).classList.add("show");
   document.body.classList.add("offcanvas-active");
+  // document.querySelector(".mobile-toggle").classList.remove("bg-white");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -57,3 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // OffCanvas Navigation Menu on Mobile Screen End
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("subHeader").style.transform = "translateY(-45px)";
+    document.getElementById("navbarMain").style.top = "0";
+    document.getElementById("mobileToggle").style.top = "0";
+    // document.getElementById("navbarMain").style.backgroundColor = "#fff";
+    // document.getElementById("logo").style.fontSize = "24px";
+  } else {
+    document.getElementById("subHeader").style.transform = "translateY(0)";
+    document.getElementById("navbarMain").style.top = "45px";
+    document.getElementById("mobileToggle").style.top = "45px";
+    // document.getElementById("logo").style.fontSize = "30px";
+  }
+}

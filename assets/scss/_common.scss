@@ -26,11 +26,20 @@
   inset: 0 0 0 0;
   background: #59c9ff;
   z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   border-radius: 4px;
 }
 // Button Animation End
 
+// Header Animation Start
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
 // Dropdown Animation Start
 @keyframes dropdownSlideDown {
   0% {
@@ -55,37 +64,6 @@
   }
 }
 .dropdown {
-  .dropdown-menu {
-    box-shadow: 0 6px 12px #0000002d;
-    border-radius: 0;
-    border: none;
-    display: none;
-
-    li {
-      margin: 8px auto;
-      .dropdown-item {
-        color: #19506d;
-        // font-family: $fontLato;
-        font-size: 14px;
-        text-transform: uppercase;
-        transition: 0.3s ease-out;
-        &:hover {
-          color: #267ae9;
-        }
-        &:active {
-          background-color: #fff;
-        }
-      }
-    }
-  }
-  &:hover {
-    .dropdown-animated {
-      display: block;
-      // margin-top: 10px;
-      transform-origin: top;
-      animation: dropdownSlideDown 500ms ease-in-out forwards;
-    }
-  }
   .dropdown-toggle {
     &::after {
       display: none;
@@ -137,14 +115,6 @@
       animation-duration: 20s;
     }
   }
-  @keyframes move-forever {
-    0% {
-      transform: translate3d(-90px, 0, 0);
-    }
-    100% {
-      transform: translate3d(85px, 0, 0);
-    }
-  }
   @media (max-width: 768px) {
     .waves {
       height: 40px;
@@ -156,16 +126,16 @@
 // Banner Waves End
 
 // List Style{
-  %list-style {
-    &::before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      border: 2px solid #2eaeff;
-      border-radius: 50%;
-      position: absolute;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+%list-style {
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2eaeff;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
   }
+}

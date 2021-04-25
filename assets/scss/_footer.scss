@@ -41,7 +41,7 @@
     font-style: italic;
   }
   p {
-    font-family: $fontGaramond;
+    font-family: $fontPoppins;
     font-size: 14px;
     font-weight: 300;
     line-height: 30px;
@@ -50,7 +50,7 @@
     margin-bottom: 0;
   }
   h3 {
-    font-family: $fontGaramond;
+    font-family: $fontPoppins;
     font-size: 18px;
     line-height: 33px;
     letter-spacing: 1px;
@@ -111,7 +111,7 @@
       @extend %list-style;
       a {
         display: inline-block;
-        font-family: $fontGaramond;
+        font-family: $fontPoppins;
         font-size: 14px;
         line-height: 3;
         color: #595f7c;
@@ -165,7 +165,7 @@
       flex-direction: row;
     }
     label {
-      font-family: $fontGaramond;
+      font-family: $fontPoppins;
       display: flex;
       flex-direction: column;
       margin-right: 20px;
@@ -189,7 +189,7 @@
     }
     .input-group {
       input {
-        font-family: $fontGaramond;
+        font-family: $fontPoppins;
         background: #121a3e;
         border: none;
         color: #fff;
@@ -198,7 +198,7 @@
         box-shadow: none;
       }
       button {
-        font-family: $fontGaramond;
+        font-family: $fontPoppins;
         font-size: 18px;
         font-weight: 500;
         text-transform: uppercase;
@@ -235,7 +235,7 @@
     .foot-links {
       a {
         display: inline-block;
-        font-family: $fontGaramond;
+        font-family: $fontPoppins;
         font-size: 14px;
         color: #42b6ff;
         transition: 0.4s ease-in;

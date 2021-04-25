@@ -29,11 +29,12 @@
     <span class="screen-darken"></span>
 
     <!-- Header Start -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
+
+    <header class="header">
+      <div id="subHeader" class="sub-header">
+        <div class="container">
           <div class="social-icons d-flex">
-            <a href="#" class="ms-0">
+            <a href="#" class="ms-0 ps-0">
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#">
@@ -46,7 +47,7 @@
               <i class="fab fa-youtube"></i>
             </a>
           </div>
-          <div class="contacts me-3 me-lg-0">
+          <div class="contacts">
             <a
               href="tel:+917906471013"
               class="d-none d-sm-inline-block me-3 me-lg-5"
@@ -83,54 +84,46 @@
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="container d-flex justify-content-between align-items-center sticky-top py-2 mobile-toggle d-lg-none"
-    >
-      <a id="logo" class="navbar-brand text-dark" href="index.html">
-        CODE WEB
-        <!-- <img src="./assets/images/logo.png" alt="logo" /> -->
-      </a>
-      <button
-        data-trigger="navbarMain"
-        class="navbar-toggler btn shadow-none"
-        type="button"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
-        </svg>
-      </button>
-    </div>
-    <header id="header" class="header">
-      <nav
-        id="navbarMain"
-        class="navbar mobile-offcanvas navbar-expand-lg navbar-light py-3"
-      >
+      <div id="mobileToggle" class="mobile-toggle py-2">
         <div class="container">
-          <div
-            class="d-flex justify-content-between align-items-center mb-2 mb-lg-0 w-100"
+          <a class="navbar-brand" href="index.html">
+            CODE WEB
+            <!-- <img src="./assets/images/logo.png" alt="logo" /> -->
+          </a>
+          <button
+            data-trigger="navbarMain"
+            class="navbar-toggler btn shadow-none pe-0"
+            type="button"
           >
-            <a id="logo" class="navbar-brand text-light" href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav id="navbarMain" class="navbar mobile-offcanvas navbar-expand-lg">
+        <div class="container">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
               CODE WEB
               <!-- <img src="./assets/images/logo.png" alt="logo" /> -->
             </a>
-            <div class="offcanvas-header">
-              <button class="btn-close float-end shadow-none"></button>
-            </div>
+            <button class="btn-close"></button>
           </div>
 
           <div class="navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <ul class="navbar-nav pe-2 ms-auto me-4 mb-2 mb-md-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"
                   >HOME</a
@@ -145,7 +138,7 @@
                     class="nav-link dropdown-toggle"
                     href="#"
                     role="button"
-                    id="dorpdownAbout"
+                    id="dorpdownServices"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
@@ -154,32 +147,29 @@
 
                   <ul
                     class="dropdown-menu dropdown-animated"
-                    aria-labelledby="dorpdownAbout"
+                    aria-labelledby="dorpdownServices"
                   >
-                    <li><a class="dropdown-item" href="#">Web Designing</a></li>
+                    <li><a class="dropdown-item" href="#">WEB DESIGNING</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Web Development</a>
+                      <a class="dropdown-item" href="#">WEB DEVELOPMENT</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Digtal Marketing</a>
+                      <a class="dropdown-item" href="#">DIGITAL MARKETING</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Domain & Hosting</a>
+                      <a class="dropdown-item" href="#">DOMAIN & HOSTING</a>
                     </li>
                   </ul>
                 </div>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="#">PORTFOLIO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">CONTACT</a>
               </li>
             </ul>
-            <a href="./customerPanel/index.html" class="btn btn-login"
-              >CUSTOMER LOGIN</a
-            >
+            <a href="./customerPanel/index.html" class="btn btn-login">LOGIN</a>
           </div>
         </div>
       </nav>
@@ -290,11 +280,11 @@
           <div class="col-md-6 mb-5 mb-md-0">
             <a class="brand-logo" href="index.html">
               <!-- <img class="img-fluid" src="./assets/images/logo.png" alt="Logo" /> -->
-              DOON WEB HUB
+              CODE WEB
             </a>
             <p>
-              DOON WEB HUB is a website development and web design company based
-              in Rishikesh, Dehradun, India, specialising in the development,
+              CODE WEB is a website development and web design company based in
+              Rishikesh, Dehradun, India, specialising in the development,
               design and marketing of websites for all kinds of businesses of
               all sizes worldwide.
             </p>
@@ -417,8 +407,8 @@
           <div class="row">
             <div class="col">
               <p>
-                Doon Web Hub is among the best website designing companies of
-                India - we not only do best website designs and develop best web
+                CODE WEB is among the best website designing companies of India
+                - we not only do best website designs and develop best web
                 solutions, we also provide Free technical support for 1 year
                 from the date of delivery of the project or project files are
                 moved to your hosting account; whichever happens earlier. 1 Year
@@ -520,7 +510,7 @@
             </div>
           </div>
           <div class="copyrights">
-            <p>Copyrights &copy; 2021 Doon Web Hub. All Rights Reserved</p>
+            <p>Copyrights &copy; 2021 CODE WEB. All Rights Reserved</p>
           </div>
         </div>
       </div>
