@@ -1,0 +1,164 @@
+// Header Style Start
+.sub-header {
+  background-color: #fff;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f1f1;
+  .welcome-message {
+    font-family: $fontPoppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #443a44;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      margin-bottom: 8px;
+    }
+  }
+  .contacts {
+    a {
+      display: inline-block;
+      font-family: $fontPoppins;
+      font-size: 12px;
+      color: #4a4a4a;
+      text-transform: uppercase;
+      text-decoration: none;
+      @media (min-width: 992px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .social-icons {
+    a {
+      font-family: $fontPoppins;
+      font-size: 14px;
+      color: #4a4a4a;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 4px;
+      margin: 0 4px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.navbar-brand {
+  transition: 0.4s;
+}
+.mobile-toggle {
+  transition: 0.4s ease-in-out;
+}
+.header {
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 46px;
+  overflow: hidden;
+//   z-index: 99;
+
+  .navbar {
+    transition: 0.4s;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 1px 5px rgba(0, 0, 0, 0.08);
+
+    .navbar-nav {
+      .nav-item {
+        transition: 0.6s ease-in;
+        @media (min-width: 992px) {
+          margin: 0 12px;
+        }
+        .nav-link {
+          font-size: 14px;
+          color: #19506d;
+          text-transform: uppercase;
+          font-family: $fontPoppins;
+          transition: 0.3s ease-in;
+          letter-spacing: 0.4px;
+          &:hover {
+            color: #267ae9;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .nav-link.active {
+          font-weight: 600;
+        }
+      }
+    }
+    .btn-login {
+      width: 180px;
+      font-size: 14px;
+      background-color: #f95732;
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+// OffCanvas Navigation on Mobile Screen Start
+/////////////////////////////////////////////
+
+body.offcanvas-active {
+  overflow: hidden;
+}
+
+.offcanvas-header {
+  display: none;
+}
+
+.screen-darken {
+  height: 100%;
+  width: 0%;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(34, 34, 34, 0.6);
+  transition: opacity 0.2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active {
+  z-index: 10;
+  transition: opacity 0.3s ease, width 0s;
+  opacity: 1;
+  width: 100%;
+  visibility: visible;
+}
+
+/* ============ mobile view ============ */
+@media all and (max-width: 991px) {
+  .offcanvas-header {
+    display: block;
+  }
+
+  .mobile-offcanvas {
+    visibility: hidden;
+    transform: translateX(-100%);
+    border-radius: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    z-index: 1200;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .mobile-offcanvas.show {
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .mobile-offcanvas {
+    display: block;
+  }
+}
+/////////////////////////////////
+// Header Style End
