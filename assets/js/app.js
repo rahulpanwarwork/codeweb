@@ -49,16 +49,17 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
     document.getElementById("subHeader").style.transform = "translateY(-45px)";
-    document.getElementById("navbarMain").style.top = "0";
-    document.getElementById("mobileToggle").style.top = "0";
-    // document.getElementById("navbarMain").style.backgroundColor = "#fff";
-    // document.getElementById("logo").style.fontSize = "24px";
+    document.getElementById("navbarMain").classList.add("navbar-sticky-dark");
+    document.getElementById("mobileToggle").classList.add("mobile-toggle-dark");
   } else {
     document.getElementById("subHeader").style.transform = "translateY(0)";
-    document.getElementById("navbarMain").style.top = "45px";
-    document.getElementById("mobileToggle").style.top = "45px";
-    // document.getElementById("logo").style.fontSize = "30px";
+    document
+      .getElementById("navbarMain")
+      .classList.remove("navbar-sticky-dark");
+    document
+      .getElementById("mobileToggle")
+      .classList.remove("mobile-toggle-dark");
   }
 }
