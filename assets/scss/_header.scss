@@ -23,7 +23,7 @@
   // Sub Header Start
   .sub-header {
     background-color: transparent;
-    padding: 8px 0;
+    padding: 12px 0;
     width: 100%;
     position: absolute;
     transition: 0.4s ease;
@@ -31,22 +31,18 @@
       @extend %flexBetweenCenter;
       font-family: $fontPoppins;
       font-size: 14px;
-      .contacts {
-        a {
-          color: $whiteColor;
-          transition: 0.4s ease;
-        }
-      }
+
       .social-icons {
         display: flex;
         a {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 32px;
-          height: 32px;
+          width: 24px;
+          height: 24px;
           border: 2px solid $whiteColor;
           border-radius: 50%;
+          font-size: 12px;
           color: $whiteColor;
           transition: 0.4s ease;
           text-transform: capitalize;
@@ -62,6 +58,15 @@
           &:last-child {
             margin-right: 0;
           }
+          // @media (min-width: 350px) and (max-width: 991px) {
+          //   margin: 0 4px;
+          // }
+          @media (min-width: 992px) {
+            width: 32px;
+            height: 32px;
+            font-size: 14px;
+            margin: 0 6px;
+          }
         }
         a.facebook {
           &:hover {
@@ -69,16 +74,33 @@
           }
         }
         a.instagram {
+          svg {
+            width: 12px;
+            height: 12px;
+            stop {
+              stop-color: $whiteColor;
+              transition: 0.4s ease;
+            }
+            @media (min-width: 992px) {
+              width: 14px;
+              height: 14px;
+            }
+          }
           &:hover {
-            // background: #d6249f;
-            color: radial-gradient(
-              circle at 30% 107%,
-              #fdf497 0%,
-              #fdf497 5%,
-              #fd5949 45%,
-              #d6249f 60%,
-              #285aeb 90%
-            );
+            svg {
+              .insta-color1 {
+                stop-color: #e09b3d;
+              }
+              .insta-color2 {
+                stop-color: #c74c4d;
+              }
+              .insta-color3 {
+                stop-color: #c21975;
+              }
+              .insta-color4 {
+                stop-color: #7024c4;
+              }
+            }
           }
         }
         a.twitter {
@@ -92,13 +114,22 @@
           }
         }
       }
+      .contacts {
+        a {
+          color: $whiteColor;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            transform: scaleX(1.1);
+          }
+        }
+      }
     }
   }
   // Mobile Menu Toggle Start
   .mobile-toggle {
     width: 100%;
     position: fixed;
-    top: 45px;
+    top: 48px;
     z-index: 9;
     transition: 0.4s ease;
     .container {
@@ -135,7 +166,7 @@
   .navbar {
     width: 100%;
     position: fixed;
-    top: 45px;
+    top: 56px;
     z-index: 9;
     transition: 0.4s ease;
     .navbar-nav {
@@ -249,6 +280,70 @@
         color: $whiteColor;
       }
     }
+    @media (max-width: 991px) {
+      .offcanvas-header {
+        margin-bottom: 15px;
+        .navbar-brand {
+          color: $themeSecondary;
+        }
+        .btn-close {
+          margin-right: 1px;
+          display: flex;
+          align-items: center;
+          opacity: 0.8;
+          box-shadow: none;
+          svg {
+            fill: $themeSecondary;
+          }
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          margin-bottom: 12px;
+          .nav-link {
+            display: inline-block;
+            color: $themeTextDark;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: 4px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              background-color: $themeSecondary;
+              transform: scaleX(0);
+              transition: transform 0.4s ease;
+            }
+            &:hover {
+              color: $themeSecondary;
+              &::after {
+                transform: scaleX(1);
+              }
+            }
+          }
+          .nav-link.active {
+            font-weight: 500;
+            color: $themeSecondary;
+            &::after {
+              transform: scaleX(1);
+              transition: transform 0.4s ease;
+            }
+          }
+        }
+      }
+      .btn-login {
+        border: 2px solid $themeSecondary;
+        color: $themeSecondary;
+        &:hover {
+          color: $whiteColor;
+          &::before {
+            box-shadow: inset 0 0 0 10em $themeSecondary;
+          }
+        }
+      }
+    }
   }
 
   .navbar-sticky-dark {
@@ -306,6 +401,7 @@
       }
     }
     .btn-close {
+      background: none;
       @media (min-width: 992px) {
         display: none;
       }
