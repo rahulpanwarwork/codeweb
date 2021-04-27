@@ -26,10 +26,10 @@
     padding: 12px 0;
     width: 100%;
     position: absolute;
-    transition: 0.4s ease;
+    transform: translateY(0);
+    transition: all 0.4s ease;
     .container {
       @extend %flexBetweenCenter;
-      font-family: $fontPoppins;
       font-size: 14px;
 
       .social-icons {
@@ -40,15 +40,14 @@
           align-items: center;
           width: 24px;
           height: 24px;
-          border: 2px solid $whiteColor;
-          border-radius: 50%;
           font-size: 12px;
           color: $whiteColor;
-          transition: 0.4s ease;
+          border: 2px solid $whiteColor;
+          border-radius: 50%;
           text-transform: capitalize;
           padding: 4px;
           margin: 0 4px;
-          transition: 0.4s ease;
+          transition: all 0.4s ease;
           &:hover {
             background-color: $whiteColor;
           }
@@ -58,9 +57,6 @@
           &:last-child {
             margin-right: 0;
           }
-          // @media (min-width: 350px) and (max-width: 991px) {
-          //   margin: 0 4px;
-          // }
           @media (min-width: 992px) {
             width: 32px;
             height: 32px;
@@ -79,7 +75,7 @@
             height: 12px;
             stop {
               stop-color: $whiteColor;
-              transition: 0.4s ease;
+              transition: all 0.4s ease;
             }
             @media (min-width: 992px) {
               width: 14px;
@@ -117,7 +113,7 @@
       .contacts {
         a {
           color: $whiteColor;
-          transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease;
           &:hover {
             transform: scaleX(1.1);
           }
@@ -125,23 +121,26 @@
       }
     }
   }
-  // Mobile Menu Toggle Start
+  .sub-header-scroll {
+    transform: translateY(-48px);
+  }
+  // Menu Toggle Start
   .mobile-toggle {
     width: 100%;
     position: fixed;
     top: 48px;
     z-index: 9;
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
     .container {
       @extend %flexBetweenCenter;
       .navbar-brand {
         color: $whiteColor;
         font-weight: 500;
-        transition: 0.4s ease;
+        transition: all 0.4s ease;
       }
       .navbar-toggler {
         color: $whiteColor;
-        transition: 0.4s ease;
+        transition: all 0.4s ease;
       }
     }
     @media (min-width: 992px) {
@@ -168,10 +167,10 @@
     position: fixed;
     top: 56px;
     z-index: 9;
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
     .navbar-nav {
       .nav-item {
-        transition: 0.4s ease;
+        transition: all 0.4s ease;
         @media (min-width: 992px) {
           margin: 0 12px;
         }
@@ -180,8 +179,7 @@
           font-size: 14px;
           color: $themeTextDark;
           text-transform: capitalize;
-          font-family: $fontPoppins;
-          transition: 0.4s ease;
+          transition: all 0.4s ease;
           letter-spacing: 0.4px;
           &::after {
             content: "";
@@ -213,48 +211,16 @@
             transition: transform 0.4s ease;
           }
         }
-        .dropdown {
-          .dropdown-menu {
-            box-shadow: 0 6px 12px #0000002d;
-            border-radius: 0;
-            border: none;
-            display: none;
-
-            li {
-              margin: 8px auto;
-              .dropdown-item {
-                color: #19506d;
-                font-family: $fontPoppins;
-                font-size: 14px;
-                text-transform: capitalize;
-                transition: 0.4s ease;
-                &:hover {
-                  color: $themePrimary;
-                }
-                &:active {
-                  background-color: $whiteColor;
-                }
-              }
-            }
-          }
-          &:hover {
-            .dropdown-animated {
-              display: block;
-              transform-origin: top;
-              animation: dropdownSlideDown 500ms ease-in-out forwards;
-            }
-          }
-        }
       }
     }
     .btn-login {
       position: relative;
-      width: 186px;
+      width: 178px;
       border: 2px solid $whiteColor;
       color: $whiteColor;
       box-shadow: none;
       overflow: hidden;
-      transition: 0.4s ease;
+      transition: all 0.4s ease;
       &::before {
         content: "";
         position: absolute;
@@ -267,7 +233,7 @@
         border-radius: 50%;
         margin: auto;
         margin-left: -150px;
-        transition: box-shadow 0.4s ease-out;
+        transition: box-shadow 0.4s ease;
         z-index: -1;
       }
       &:hover {
@@ -386,11 +352,6 @@
       }
     }
   }
-
-  // OffCanvas Navigation Start
-  // .offcanvas-active {
-  //   overflow: hidden;
-  // }
   .offcanvas-header {
     @extend %flexBetweenCenter;
     width: 100%;

@@ -1,38 +1,55 @@
-// Button Animation Start
-.btn-animate {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  background-color: #aa00ff;
-  border: transparent;
-  z-index: 1;
-  border-radius: 4px;
+// Dropdown Start
+.dropdown {
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px #0000002d;
+    transition: all 0.4s ease;
+    li {
+      margin: 8px auto;
+      .dropdown-item {
+        color: $themeTextDark;
+        font-size: 14px;
+        text-transform: capitalize;
+        transition: all 0.4s ease;
+        &:hover {
+          background-color: $themeSecondary;
+          color: $whiteColor;
+        }
+        &:active {
+          background-color: $whiteColor;
+        }
+      }
+    }
+  }
+  i {
+    transition: all 0.4s ease;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  &:hover {
+    i {
+      transform: rotate(180deg);
+    }
+    .dropdown-menu {
+      height: 156px;
+    }
+  }
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
 }
-.btn-animate::before {
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-.btn-animate:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.btn-animate::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  inset: 0 0 0 0;
-  background: #59c9ff;
-  z-index: -1;
-  transition: transform 0.4s ease;
-  border-radius: 4px;
-}
-// Button Animation End
+// Dropdown End
 
-// Header Animation Start
-@keyframes move-forever {
+// Banner Waves Start
+@keyframes moveForever {
   0% {
     transform: translate3d(-90px, 0, 0);
   }
@@ -40,48 +57,12 @@
     transform: translate3d(85px, 0, 0);
   }
 }
-// Dropdown Animation Start
-@keyframes dropdownSlideDown {
-  0% {
-    transform: scaleY(0);
-  }
-  80% {
-    transform: scaleY(1.1);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes buttonSlideRight {
-  0% {
-    transform: scaleY(0);
-  }
-  80% {
-    transform: scaleY(1.1);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.dropdown {
-  .dropdown-toggle {
-    &::after {
-      display: none;
-    }
-  }
-}
-// Dropdown Animation End
-
-// Banner Waves Start
 .banner {
-  //   position: relative;
-  //   text-align: center;
   background: linear-gradient(
     60deg,
     rgba($themeSecondary, 1) 0%,
     rgba($themePrimary, 1) 100%
   );
-  //   color: white;
   .inner-banner {
     height: 85vh;
     width: 100%;
@@ -96,7 +77,7 @@
     min-height: 100px;
     max-height: 150px;
     .parallax > use {
-      animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+      animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
     }
     .parallax > use:nth-child(1) {
       animation-delay: -2s;
