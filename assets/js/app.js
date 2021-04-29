@@ -75,7 +75,6 @@ function showTitle() {
     title[i].style.display = "none";
   }
   titleIndex++;
-  console.log(titleIndex);
   if (titleIndex > title.length) {
     titleIndex = 1;
   }
