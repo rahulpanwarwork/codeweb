@@ -114,8 +114,13 @@
         a {
           color: $whiteColor;
           transition: all 0.4s ease;
+          i {
+            transition: all 0.4s ease;
+          }
           &:hover {
-            transform: scaleX(1.1);
+            i {
+              transform: rotate(360deg);
+            }
           }
         }
       }

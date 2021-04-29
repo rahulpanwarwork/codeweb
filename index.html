@@ -25,11 +25,24 @@
   </head>
 
   <body>
+    <!-- Loader Start -->
+    <ul class="loader">
+      <li class="center"></li>
+      <li class="item item-1"></li>
+      <li class="item item-2"></li>
+      <li class="item item-3"></li>
+      <li class="item item-4"></li>
+      <li class="item item-5"></li>
+      <li class="item item-6"></li>
+      <li class="item item-7"></li>
+      <li class="item item-8"></li>
+    </ul>
+    <!-- Loader End -->
+
     <!-- OffCanvas Navigation Overlay -->
     <span class="screen-darken"></span>
 
     <!-- Header Start -->
-
     <header class="header">
       <div id="subHeader" class="sub-header">
         <div class="container">
@@ -249,7 +262,7 @@
                 <a class="nav-link" href="#">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="./contact.html">Contact</a>
               </li>
             </ul>
             <a
@@ -607,5 +620,23 @@
 
     <!-- OffCanvas Navigation JS -->
     <script src="./assets/js/app.js"></script>
+    <script>
+      // Banner Title Change
+      var titleIndex = 0;
+      showTitle();
+      function showTitle() {
+        var i;
+        var title = document.getElementsByClassName("banner-title");
+        for (i = 0; i < title.length; i++) {
+          title[i].style.display = "none";
+        }
+        titleIndex++;
+        if (titleIndex > title.length) {
+          titleIndex = 1;
+        }
+        title[titleIndex - 1].style.display = "block";
+        setTimeout(showTitle, 4000); // Change Title every 4 seconds
+      }
+    </script>
   </body>
 </html>

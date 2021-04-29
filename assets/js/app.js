@@ -65,19 +65,14 @@ function scrollFunction() {
   }
 }
 
-// Banner Title Change
-var titleIndex = 0;
-showTitle();
-function showTitle() {
-  var i;
-  var title = document.getElementsByClassName("banner-title");
-  for (i = 0; i < title.length; i++) {
-    title[i].style.display = "none";
+// Page Loader Start
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".loader").style.visibility = "visible";
+  } else {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
   }
-  titleIndex++;
-  if (titleIndex > title.length) {
-    titleIndex = 1;
-  }
-  title[titleIndex - 1].style.display = "block";
-  setTimeout(showTitle, 4000); // Change Title every 4 seconds
-}
+};
