@@ -66,7 +66,7 @@ a {
 .loader .center {
   width: 40px;
   height: 40px;
-  background: #543ab7;
+  background: #00aeef;
   border-radius: 50%;
   -webkit-animation: center 3.2s ease-in-out infinite;
        -o-animation: center 3.2s ease-in-out infinite;
@@ -81,7 +81,7 @@ a {
   left: 0;
   right: 0;
   margin: auto;
-  background: #543ab7;
+  background: #00aeef;
   border-radius: 50%;
 }
 
@@ -704,7 +704,7 @@ a {
 }
 
 .dropdown .dropdown-menu li .dropdown-item:hover {
-  background-color: #543ab7;
+  background-color: #00aeef;
   color: #ffffff;
 }
 
@@ -1003,6 +1003,64 @@ a {
           animation-duration: 20s;
 }
 
+.about-us {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+@media (min-width: 992px) {
+  .about-us {
+    padding: 100px 0;
+  }
+}
+
+.about-us .section-title {
+  font-family: "Baloo 2", cursive;
+  font-size: 34px;
+  color: #5e707d;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.about-us .section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #00aeef;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .about-us .section-title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+
+.about-us h3 {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #2e3235;
+  text-align: justify;
+}
+
+@media (min-width: 992px) {
+  .about-us h3 {
+    font-size: 24px;
+    line-height: 50px;
+    padding-right: 20px;
+  }
+}
+
+.about-us p {
+  color: #6f7a82;
+  line-height: 35px;
+  text-align: justify;
+}
+
 .footer .product-services li::before {
   content: "";
   width: 12px;
@@ -1205,8 +1263,10 @@ a {
 }
 
 .header .mobile-toggle .container .navbar-brand {
+  font-family: "Baloo 2", cursive;
+  font-size: 26px;
+  font-weight: 600;
   color: #ffffff;
-  font-weight: 500;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -1233,11 +1293,11 @@ a {
 }
 
 .header .mobile-toggle-dark .container .navbar-brand {
-  color: #543ab7;
+  color: #00aeef;
 }
 
 .header .mobile-toggle-dark .container .navbar-toggler {
-  color: #543ab7;
+  color: #00aeef;
 }
 
 .header .navbar {
@@ -1376,7 +1436,7 @@ a {
     margin-bottom: 15px;
   }
   .header .navbar .offcanvas-header .navbar-brand {
-    color: #543ab7;
+    color: #00aeef;
   }
   .header .navbar .offcanvas-header .btn-close {
     margin-right: 1px;
@@ -1393,7 +1453,7 @@ a {
             box-shadow: none;
   }
   .header .navbar .offcanvas-header .btn-close svg {
-    fill: #543ab7;
+    fill: #00aeef;
   }
   .header .navbar .navbar-nav .nav-item {
     margin-bottom: 12px;
@@ -1411,7 +1471,7 @@ a {
     left: 0;
     right: 0;
     margin: auto;
-    background-color: #543ab7;
+    background-color: #00aeef;
     -webkit-transform: scaleX(0);
         -ms-transform: scaleX(0);
          -o-transform: scaleX(0);
@@ -1423,7 +1483,7 @@ a {
     transition: transform 0.4s ease, -webkit-transform 0.4s ease, -o-transform 0.4s ease;
   }
   .header .navbar .navbar-nav .nav-item .nav-link:hover {
-    color: #543ab7;
+    color: #00aeef;
   }
   .header .navbar .navbar-nav .nav-item .nav-link:hover::after {
     -webkit-transform: scaleX(1);
@@ -1433,7 +1493,7 @@ a {
   }
   .header .navbar .navbar-nav .nav-item .nav-link.active {
     font-weight: 500;
-    color: #543ab7;
+    color: #00aeef;
   }
   .header .navbar .navbar-nav .nav-item .nav-link.active::after {
     -webkit-transform: scaleX(1);
@@ -1447,15 +1507,15 @@ a {
     transition: transform 0.4s ease, -webkit-transform 0.4s ease, -o-transform 0.4s ease;
   }
   .header .navbar .btn-login {
-    border: 2px solid #543ab7;
-    color: #543ab7;
+    border: 2px solid #00aeef;
+    color: #00aeef;
   }
   .header .navbar .btn-login:hover {
     color: #ffffff;
   }
   .header .navbar .btn-login:hover::before {
-    -webkit-box-shadow: inset 0 0 0 10em #543ab7;
-            box-shadow: inset 0 0 0 10em #543ab7;
+    -webkit-box-shadow: inset 0 0 0 10em #00aeef;
+            box-shadow: inset 0 0 0 10em #00aeef;
   }
 }
 
@@ -1467,7 +1527,7 @@ a {
 }
 
 .header .navbar-sticky-dark .offcanvas-header .navbar-brand {
-  color: #543ab7;
+  color: #00aeef;
 }
 
 .header .navbar-sticky-dark .navbar-nav .nav-item .nav-link {
@@ -1475,15 +1535,15 @@ a {
 }
 
 .header .navbar-sticky-dark .navbar-nav .nav-item .nav-link:hover {
-  color: #543ab7;
+  color: #00aeef;
 }
 
 .header .navbar-sticky-dark .navbar-nav .nav-item .nav-link:hover::after {
-  background-color: #543ab7;
+  background-color: #00aeef;
 }
 
 .header .navbar-sticky-dark .navbar-nav .nav-item .nav-link.active {
-  color: #543ab7;
+  color: #00aeef;
 }
 
 .header .navbar-sticky-dark .navbar-nav .nav-item .nav-link.active::after {
@@ -1491,8 +1551,8 @@ a {
 }
 
 .header .navbar-sticky-dark .btn-login {
-  border: 2px solid #543ab7;
-  color: #543ab7;
+  border: 2px solid #00aeef;
+  color: #00aeef;
 }
 
 .header .navbar-sticky-dark .btn-login:hover {
@@ -1500,8 +1560,8 @@ a {
 }
 
 .header .navbar-sticky-dark .btn-login:hover::before {
-  -webkit-box-shadow: inset 0 0 0 10em #543ab7;
-          box-shadow: inset 0 0 0 10em #543ab7;
+  -webkit-box-shadow: inset 0 0 0 10em #00aeef;
+          box-shadow: inset 0 0 0 10em #00aeef;
 }
 
 .header .offcanvas-header {
@@ -1509,9 +1569,16 @@ a {
   padding: 0;
 }
 
+.header .offcanvas-header .navbar-brand {
+  font-family: "Baloo 2", cursive;
+  font-size: 26px;
+  font-weight: 600;
+}
+
 @media (min-width: 992px) {
   .header .offcanvas-header .navbar-brand {
     color: #ffffff;
+    font-size: 34px;
   }
 }
 
