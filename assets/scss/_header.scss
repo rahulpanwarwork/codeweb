@@ -72,6 +72,8 @@
         }
         a.instagram {
           svg {
+            width: 16px;
+            height: 16px;
             stop {
               stop-color: $whiteColor;
               transition: all 0.4s ease;
@@ -80,10 +82,13 @@
           &:hover {
             svg {
               .insta-color1 {
-                stop-color: #ea8928;
+                stop-color: #fa8f21;
               }
               .insta-color2 {
-                stop-color: #cf2b8f;
+                stop-color: #d82d7e;
+              }
+              .insta-color3 {
+                stop-color: #8c3aaa;
               }
             }
           }

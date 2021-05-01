@@ -866,12 +866,6 @@ a {
   height: 100vh;
 }
 
-@media only screen and (max-width: 991px) and (hover: none) and (pointer: coarse) {
-  .banner {
-    height: calc(100vh - 56px);
-  }
-}
-
 .banner .inner-banner {
   width: 100%;
   height: 100%;
@@ -1183,6 +1177,11 @@ a {
   color: #3b5998;
 }
 
+.header .sub-header .container .social-icons a.instagram svg {
+  width: 16px;
+  height: 16px;
+}
+
 .header .sub-header .container .social-icons a.instagram svg stop {
   stop-color: #ffffff;
   -webkit-transition: all 0.4s ease;
@@ -1191,11 +1190,15 @@ a {
 }
 
 .header .sub-header .container .social-icons a.instagram:hover svg .insta-color1 {
-  stop-color: #ea8928;
+  stop-color: #fa8f21;
 }
 
 .header .sub-header .container .social-icons a.instagram:hover svg .insta-color2 {
-  stop-color: #cf2b8f;
+  stop-color: #d82d7e;
+}
+
+.header .sub-header .container .social-icons a.instagram:hover svg .insta-color3 {
+  stop-color: #8c3aaa;
 }
 
 .header .sub-header .container .social-icons a.twitter:hover {
