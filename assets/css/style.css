@@ -993,7 +993,7 @@ a {
 
 .about-us {
   background-color: #ffffff;
-  padding: 90px 0 50px;
+  padding: 50px 0;
 }
 
 @media (min-width: 992px) {
@@ -1611,6 +1611,7 @@ a {
     -o-transition: visibility 0.3s ease, -o-transform 0.4s ease;
     transition: visibility 0.3s ease, transform 0.4s ease;
     transition: visibility 0.3s ease, transform 0.4s ease, -webkit-transform 0.4s ease, -o-transform 0.4s ease;
+    background-color: #ffffff;
   }
   .header .mobile-offcanvas.show {
     visibility: visible;
@@ -1618,7 +1619,6 @@ a {
         -ms-transform: translateX(0);
          -o-transform: translateX(0);
             transform: translateX(0);
-    background-color: #ffffff;
   }
 }
 
