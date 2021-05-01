@@ -866,7 +866,7 @@ a {
   height: 100vh;
 }
 
-@media only screen and (hover: none) {
+@media only screen and (max-width: 991px) and (hover: none) and (pointer: coarse) {
   .banner {
     height: calc(100vh - 56px);
   }

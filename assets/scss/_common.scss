@@ -88,11 +88,9 @@
     rgba($themePrimary, 1) 100%
   );
   height: 100vh;
-  @media only screen and (hover: none) {
+  @media only screen and (max-width: 991px) and (hover: none) and (pointer: coarse) {
     height: calc(100vh - 56px);
   }
-  // @media (min-width: 992px) {
-  // }
   .inner-banner {
     width: 100%;
     height: 100%;
