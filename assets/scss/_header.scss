@@ -28,6 +28,7 @@
     position: absolute;
     transform: translateY(0);
     transition: all 0.4s ease;
+    z-index: 9;
     .container {
       @extend %flexBetweenCenter;
       font-size: 14px;
