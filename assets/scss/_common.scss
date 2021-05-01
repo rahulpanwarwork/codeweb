@@ -87,19 +87,13 @@
     rgba($themeSecondary, 1) 0%,
     rgba($themePrimary, 1) 100%
   );
-  height: 100vh;
-  // overflow: hidden;
-  // position: relative;
+  height: calc(100vh - 55px);
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
   .inner-banner {
     width: 100%;
     height: 100%;
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // padding: 0 15px;
     .banner-content {
       width: 100%;
       height: 100%;
