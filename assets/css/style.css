@@ -863,7 +863,6 @@ a {
   background: -webkit-linear-gradient(30deg, #543ab7 0%, #00aeef 100%);
   background: -o-linear-gradient(30deg, #543ab7 0%, #00aeef 100%);
   background: linear-gradient(60deg, #543ab7 0%, #00aeef 100%);
-  overflow: hidden;
 }
 
 .banner .inner-banner {
@@ -881,7 +880,6 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px 15px;
 }
 
 .banner .inner-banner .banner-content {
