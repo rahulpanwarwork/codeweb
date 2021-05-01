@@ -87,6 +87,7 @@
     rgba($themeSecondary, 1) 0%,
     rgba($themePrimary, 1) 100%
   );
+  overflow: hidden;
   .inner-banner {
     width: 100%;
     height: 100vh;
@@ -183,12 +184,15 @@
     margin-bottom: 18px;
     &::after {
       content: "";
-      width: 60px;
+      width: 45px;
       height: 3px;
       background-color: $themePrimary;
       position: absolute;
       left: 0;
       bottom: 0;
+      @media (min-width: 992px) {
+        width: 60px;
+      }
     }
     @media (min-width: 992px) {
       font-size: 40px;

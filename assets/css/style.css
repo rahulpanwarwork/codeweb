@@ -863,6 +863,7 @@ a {
   background: -webkit-linear-gradient(30deg, #543ab7 0%, #00aeef 100%);
   background: -o-linear-gradient(30deg, #543ab7 0%, #00aeef 100%);
   background: linear-gradient(60deg, #543ab7 0%, #00aeef 100%);
+  overflow: hidden;
 }
 
 .banner .inner-banner {
@@ -1024,12 +1025,18 @@ a {
 
 .about-us .section-title::after {
   content: "";
-  width: 60px;
+  width: 45px;
   height: 3px;
   background-color: #00aeef;
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .about-us .section-title::after {
+    width: 60px;
+  }
 }
 
 @media (min-width: 992px) {
