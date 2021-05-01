@@ -72,30 +72,18 @@
         }
         a.instagram {
           svg {
-            width: 12px;
-            height: 12px;
             stop {
               stop-color: $whiteColor;
               transition: all 0.4s ease;
-            }
-            @media (min-width: 992px) {
-              width: 14px;
-              height: 14px;
             }
           }
           &:hover {
             svg {
               .insta-color1 {
-                stop-color: #e09b3d;
+                stop-color: #ea8928;
               }
               .insta-color2 {
-                stop-color: #c74c4d;
-              }
-              .insta-color3 {
-                stop-color: #c21975;
-              }
-              .insta-color4 {
-                stop-color: #7024c4;
+                stop-color: #cf2b8f;
               }
             }
           }
@@ -207,7 +195,6 @@
               transform: scaleX(1);
             }
           }
-
           @media (min-width: 992px) {
             color: $whiteColor;
           }
@@ -295,6 +282,12 @@
               &::after {
                 transform: scaleX(1);
               }
+              i {
+                color: $themePrimary;
+              }
+            }
+            i {
+              color: $themeTextGrey1;
             }
           }
           .nav-link.active {
@@ -339,6 +332,12 @@
             &::after {
               background-color: $themePrimary;
             }
+            i {
+              color: $themePrimary;
+            }
+          }
+          i {
+            color: $themeTextGrey1;
           }
         }
         .nav-link.active {
