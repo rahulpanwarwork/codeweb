@@ -119,9 +119,9 @@
 // About Section Start
 .about-us {
   background-color: $whiteColor;
-  padding: 50px 0 20px;
+  padding: 50px 0 50px;
   @media (min-width: 992px) {
-    padding: 100px 0 40px;
+    padding: 100px 0 100px;
   }
   h3 {
     font-size: 20px;
@@ -144,9 +144,10 @@
 
 // Services Start
 .services {
-  padding: 50px 0 20px;
+  padding: 50px 0 50px;
+  background-color: $themeBackground2;
   @media (min-width: 992px) {
-    padding: 100px 0 40px;
+    padding: 100px 0 100px;
   }
   .services-card {
     background-color: $whiteColor;

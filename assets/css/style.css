@@ -33,6 +33,7 @@ body ::-webkit-scrollbar-thumb:hover {
 a {
   text-decoration: none;
   display: inline-block;
+  outline: none;
 }
 
 .header .sub-header .container, .header .mobile-toggle .container, .header .offcanvas-header {
@@ -1632,12 +1633,12 @@ a {
 
 .about-us {
   background-color: #ffffff;
-  padding: 50px 0 20px;
+  padding: 50px 0 50px;
 }
 
 @media (min-width: 992px) {
   .about-us {
-    padding: 100px 0 40px;
+    padding: 100px 0 100px;
   }
 }
 
@@ -1664,12 +1665,13 @@ a {
 }
 
 .services {
-  padding: 50px 0 20px;
+  padding: 50px 0 50px;
+  background-color: #f8f9fb;
 }
 
 @media (min-width: 992px) {
   .services {
-    padding: 100px 0 40px;
+    padding: 100px 0 100px;
   }
 }
 
