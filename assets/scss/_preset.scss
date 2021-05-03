@@ -7,6 +7,8 @@ html,
 body {
   font-family: $fontMontserrat;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -103,3 +105,18 @@ $item-rotation: 0deg;
   }
 }
 // Loader End
+
+// List Style{
+%list-style {
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid $themePrimary;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

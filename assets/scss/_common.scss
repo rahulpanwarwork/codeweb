@@ -48,136 +48,14 @@
 }
 // Dropdown End
 
-// Banner Waves Start
-@keyframes moveForever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-// Banner Text Animation
-@keyframes titleAnimation {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  }
-  20% {
-    transform: translateY(0);
-    opacity: 1;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-  }
-  80% {
-    transform: translateY(0);
-    opacity: 1;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-  }
-  100% {
-    transform: translateY(50px);
-    opacity: 0;
-    clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
-  }
-}
-
-.banner {
-  background: linear-gradient(
-    60deg,
-    rgba($themeSecondary, 1) 0%,
-    rgba($themePrimary, 1) 100%
-  );
-  height: 100vh;
-  @media only screen and (max-width: 991px) and (hover: none) {
-    height: calc(100vh - 56px);
-  }
-  .inner-banner {
-    width: 100%;
-    height: 100%;
-    .banner-content {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      .banner-title {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
-        .banner-text {
-          display: inline-block;
-          width: 100%;
-          font-family: $fontBaloo;
-          font-size: 35px;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: $whiteColor;
-          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-          transform: translateY(-50px);
-          opacity: 0;
-          animation: titleAnimation 4s ease infinite;
-          animation-fill-mode: forwards;
-          animation-delay: 0.6s;
-          &:first-child {
-            animation-delay: 0.7s;
-          }
-          &:last-child {
-            color: $themeTextYellow;
-            animation-delay: 0.5s;
-          }
-          @media (min-width: 576px) {
-            font-size: 45px;
-          }
-          @media (min-width: 992px) {
-            font-size: 65px;
-          }
-        }
-      }
-    }
-  }
-  .waves {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    min-height: 100px;
-    height: 20vh;
-    .parallax > use {
-      animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-    }
-    .parallax > use:nth-child(1) {
-      animation-delay: -2s;
-      animation-duration: 7s;
-    }
-    .parallax > use:nth-child(2) {
-      animation-delay: -3s;
-      animation-duration: 10s;
-    }
-    .parallax > use:nth-child(3) {
-      animation-delay: -4s;
-      animation-duration: 13s;
-    }
-    .parallax > use:nth-child(4) {
-      animation-delay: -5s;
-      animation-duration: 20s;
-    }
-  }
-}
-// Banner Waves End
-
-// About Section Start
-.about-us {
-  background-color: $whiteColor;
-  padding: 50px 0;
-  @media (min-width: 992px) {
-    padding: 100px 0;
-  }
-  .section-title {
+// Section Title Start
+.section-title {
+  h2 {
+    display: inline-block;
+    position: relative;
     font-family: $fontBaloo;
     font-size: 34px;
     color: $themeTextGrey3;
-    position: relative;
     margin-bottom: 18px;
     &::after {
       content: "";
@@ -196,36 +74,13 @@
       margin-bottom: 24px;
     }
   }
-  h3 {
-    font-size: 20px;
-    line-height: 40px;
-    font-weight: 300;
-    color: $themeTextDark;
-    text-align: justify;
-    @media (min-width: 992px) {
-      font-size: 24px;
-      line-height: 50px;
-      padding-right: 20px;
+}
+.section-title.text-center {
+  h2 {
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
-  p {
-    color: $themeTextGrey2;
-    line-height: 35px;
-    text-align: justify;
-  }
 }
-
-// List Style{
-%list-style {
-  &::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    border: 2px solid $themePrimary;
-    border-radius: 50%;
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+// Section Title End
