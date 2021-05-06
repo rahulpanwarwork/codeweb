@@ -20,6 +20,11 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+    <!-- Swiper Slider -->
+    <link
+      rel="stylesheet"
+      href="https://md-aqil.github.io/images/swiper.min.css"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -635,6 +640,126 @@
         </div>
       </section>
       <!-- Services End -->
+
+      <!-- Client Testimonial Start -->
+      <section class="client-testimonial">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <h2>Our Customers</h2>
+          </div>
+          <div class="slider-wrapper">
+            <div class="user-image">
+              <div class="swiper-container image-slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      class="u3"
+                      src="https://md-aqil.github.io/images/2091127763_1_1_1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="u1"
+                      src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="u2"
+                      src="https://md-aqil.github.io/images/attractive-beautiful-beauty-1986684.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="u4"
+                      src="https://md-aqil.github.io/images/beautiful-beauty-face-2657838.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user-review">
+              <div class="swiper-container review-slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+                      <p>
+                        “This is best and biggest unified platform for instant
+                        online admission. We can easily take admission for any
+                        course in any institute..“
+                      </p>
+                      <div class="name">-Ramkishor Verma- 1</div>
+                      <div class="designation">University Student</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+
+                      <p>
+                        “This is best and biggest unified platform for instant
+                        online admission. We can easily take admission for any
+                        course in any institute..“
+                      </p>
+                      <div class="name">-Ramkishor Verma- 2</div>
+                      <div class="designation">University Student</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+
+                      <p>
+                        “This is best and biggest unified platform for instant
+                        online admission. We can easily take admission for any
+                        course in any institute..“
+                      </p>
+                      <div class="name">-Ramkishor Verma- 3</div>
+                      <div class="designation">University Student</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+
+                      <p>
+                        “This is best and biggest unified platform for instant
+                        online admission. We can easily take admission for any
+                        course in any institute..“
+                      </p>
+                      <div class="name">-Ramkishor Verma- 4</div>
+                      <div class="designation">University Student</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-white"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Client Testimonial End -->
     </main>
 
     <!-- Footer Start -->
@@ -912,9 +1037,15 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+    <!-- Client Slider JS -->
+    <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> -->
 
-    <!-- OffCanvas Navigation JS -->
+    <!-- Swiper Slider -->
+    <script src="https://md-aqil.github.io/images/swiper.min.js"></script>
+    <!-- App JS -->
     <script src="./assets/js/app.js"></script>
+
     <script>
       // Banner Title Change
       var titleIndex = 0;
@@ -932,6 +1063,53 @@
         title[titleIndex - 1].style.display = "block";
         setTimeout(showTitle, 4000); // Change Title every 4 seconds
       }
+    </script>
+
+    <!-- Client Slider -->
+    <script>
+      var reviewSlide = new Swiper(".review-slide", {
+        speed: 400,
+        spaceBetween: 50,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        direction: "vertical",
+        pagination: {
+          clickable: true,
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+        thumbs: {
+          swiper: imageSlide,
+        },
+      });
+      var imageSlide = new Swiper(".image-slide", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 50,
+          modifier: 6,
+          slideShadows: false,
+        },
+        pagination: {
+          clickable: true,
+          el: ".swiper-pagination",
+        },
+        thumbs: {
+          swiper: reviewSlide,
+        },
+      });
     </script>
   </body>
 </html>
