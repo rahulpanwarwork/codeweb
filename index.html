@@ -645,7 +645,7 @@
       <section class="client-testimonial">
         <div class="container">
           <div class="section-title text-center mb-5">
-            <h2>Our Customers</h2>
+            <h2>Customers Say</h2>
           </div>
           <div class="slider-wrapper">
             <div class="user-image">
@@ -1071,11 +1071,15 @@
         speed: 400,
         spaceBetween: 50,
         loop: true,
+        breakpoints: {
+          768: {
+            direction: "vertical",
+          },
+        },
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
         },
-        direction: "vertical",
         pagination: {
           clickable: true,
           el: ".swiper-pagination",

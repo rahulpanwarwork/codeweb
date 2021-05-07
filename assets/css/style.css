@@ -1954,7 +1954,13 @@ a {
 }
 
 .client-testimonial .slider-wrapper .user-review .review-slide {
-  height: 80vh;
+  height: 65vh;
+}
+
+@media (min-width: 768px) {
+  .client-testimonial .slider-wrapper .user-review .review-slide {
+    height: 80vh;
+  }
 }
 
 .client-testimonial .slider-wrapper .user-review .review-slide .quote {
@@ -2035,17 +2041,6 @@ a {
   text-align: left;
   color: #fff;
   opacity: 0.65;
-}
-
-@media (max-width: 767px) {
-  .client-testimonial .slider-wrapper .user-review .review-slide .swiper-pagination {
-    top: 100%;
-    -webkit-transform: translate(10px, -80px) rotate(-90deg);
-        -ms-transform: translate(10px, -80px) rotate(-90deg);
-         -o-transform: translate(10px, -80px) rotate(-90deg);
-            transform: translate(10px, -80px) rotate(-90deg);
-    right: 50%;
-  }
 }
 
 .footer {
