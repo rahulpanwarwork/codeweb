@@ -1954,7 +1954,7 @@ a {
 }
 
 .client-testimonial .slider-wrapper .user-review .review-slide {
-  height: 65vh;
+  height: 500px;
 }
 
 @media (min-width: 768px) {
