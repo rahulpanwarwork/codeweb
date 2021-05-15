@@ -286,22 +286,22 @@
   height: 80vh;
   background-color: $themePrimary;
   overflow: hidden;
-  .swiper-container{
-    .swiper-wrapper{
-      .swiper-slide{
-        .project-wrap{
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        .project-wrap {
           display: flex;
           // justify-content: space-between;
           align-items: stretch;
           height: 100%;
-          .content-wrap{
+          .content-wrap {
             width: 50%;
             height: 100%;
           }
-          .image-wrap{
+          .image-wrap {
             // height: 100%;
             width: 50%;
-            img{
+            img {
               height: 80vh;
               object-fit: contain;
             }
@@ -474,13 +474,13 @@
       }
     }
     .cards-circle {
-      width: 240px;
-      height: 240px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background: #fff;
       position: absolute;
-      top: -20%;
-      left: 50%;
+      top: -19%;
+      left: 56%;
       opacity: 0.9;
       transform: scale(0);
       transition: all 0.3s ease;
@@ -495,17 +495,32 @@
         transition: all 0.3s ease;
         transition-delay: 0.2s;
       }
+      @media (min-width: 360px) {
+        left: 60%;
+      }
+      @media (min-width: 410px) {
+        left: 65%;
+      }
+      @media (min-width: 768px) {
+        left: 60%;
+      }
+      @media (min-width: 992px) {
+        left: 55%;
+      }
+      @media (min-width: 1200px) {
+        left: 62%;
+      }
     }
     .cards-list {
       list-style: none;
       position: absolute;
-      top: -9px;
-      right: 7px;
+      top: -25px;
+      right: 4px;
       padding-top: 60px;
       transition: all 0.4s ease;
       li {
         display: inline-block;
-        margin: 4px;
+        margin: 1px;
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -536,7 +551,7 @@
     }
     &:hover {
       .cards-rect {
-        left: 10%;
+        left: 5%;
         .card-shadow {
           left: -20%;
         }

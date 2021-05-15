@@ -2134,13 +2134,13 @@ a {
 }
 
 .our-team .team-cards .cards-circle {
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: #fff;
   position: absolute;
-  top: -20%;
-  left: 50%;
+  top: -19%;
+  left: 56%;
   opacity: 0.9;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -2170,11 +2170,41 @@ a {
           transition-delay: 0.2s;
 }
 
+@media (min-width: 360px) {
+  .our-team .team-cards .cards-circle {
+    left: 60%;
+  }
+}
+
+@media (min-width: 410px) {
+  .our-team .team-cards .cards-circle {
+    left: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-team .team-cards .cards-circle {
+    left: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .our-team .team-cards .cards-circle {
+    left: 55%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-team .team-cards .cards-circle {
+    left: 62%;
+  }
+}
+
 .our-team .team-cards .cards-list {
   list-style: none;
   position: absolute;
-  top: -9px;
-  right: 7px;
+  top: -25px;
+  right: 4px;
   padding-top: 60px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -2183,7 +2213,7 @@ a {
 
 .our-team .team-cards .cards-list li {
   display: inline-block;
-  margin: 4px;
+  margin: 1px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -2237,7 +2267,7 @@ a {
 }
 
 .our-team .team-cards:hover .cards-rect {
-  left: 10%;
+  left: 5%;
 }
 
 .our-team .team-cards:hover .cards-rect .card-shadow {
